@@ -1,0 +1,32 @@
+licencse
+readme.md
+analysis/
+  ├── dashboard.txt # LINK WITH DASHBOARD
+  └── tableau_dashboard.png # Dashboard preview
+=======================================================================
+
+overdose pipeline/ # parent #1 folder
+│
+├── data/ # raw data storage folder
+│   └── vsrr_overdose_temp.csv
+│
+├── scripts/
+│   └── python/ # scripts storage folder
+│       ├── config.py               # login credentials for SQL database server
+│       ├── import_vsrr.py          # VSRR data ingestion
+│       ├── master_sql.sql          # Transformation and aggregation logic
+│       ├── sql_load.py             # SQL load into workbench via local server (MySQL)
+│       ├── export_sql.py           # Final dataset export
+│       └── run_pipeline.bat        # Scheduler entry point
+│
+├── updated_data/ # transformed annualized data folder
+│   └── vsrr_overdose_yearly.csv # annualized data 
+│
+=======================================================================
+
+LOCAL GOOGLE DRIVE
+│
+└── overdosePipeline/
+    └── national/
+        ├── master_overdose.full.csv # tablaue data CONNECTED csv file
+        └── csrr_overdose_yearly.csv # SQL annualized clean data
